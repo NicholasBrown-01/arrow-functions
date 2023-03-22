@@ -182,17 +182,19 @@ Student.prototype.scope = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scope();
+joe.scope();
 
-Student.prototype.scopeArrow = () => console.log(this);
+Student.prototype.scopeArrow = () => console.log('line 187 ' + this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scopeArrow();
+joe.scopeArrow();
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
+// 'this' refers to Joe the object.
 //
 // 2. What is "this" when joe.scopeArrow() is invoked?
+// 'this' refers to another piece of data because arrow functions do not have their own 'this' value.
 //
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// Functions are dynamically scoped and can refer to data within as 'this'. While arrow functions inherit from the surrounding context, thus they cannot be used such as a function or constructor function.
